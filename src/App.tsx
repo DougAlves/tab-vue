@@ -7,8 +7,15 @@ function App() {
   return (
     <div className="App">
       <TabController
-        statemetns={['ola', 'ola2']}
-        btn_texts={['bt1', 'bt2']}
+        props={[{
+          statemet:'ola',
+          btn_text: 'bt1'
+        },
+        {
+          statemet:'ola 2',
+          btn_text: 'bt2'
+        },]
+      }
       ></TabController>
     </div>
   );
