@@ -20,11 +20,11 @@
 <template>
 
     <div class = 'statement'>
-        {{statements[i]}}
+        {{props[i].statement}}
     </div>
     <div class="form-group">
-        <TabButton v-for="btn_text, i in btn_texts" :key="i"
-                :text="btn_text"
+        <TabButton v-for="tab, i in props" :key="i"
+                :text="tab.btn_text"
                 :i="i"
                 @onChange="(val) => updateText(val)">
         </TabButton>
@@ -40,9 +40,10 @@ import TabButton from './TabButton.vue'
     }
 
     defineProps<{
-        statements: string[],
-        btn_texts:string[]
-    }>()
+        props: {
+            statement: string,
+            btn_text: string
+    }[]}>()
 
     const i = ref(0)
 </script>

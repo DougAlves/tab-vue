@@ -1,10 +1,22 @@
 <script setup lang="ts">
-import TabControler from "./components/TabControler.vue";
+import TabController from "./components/TabController.vue";
 </script>
 
 <template>
-  <TabControler
-    :statements="['texto 1', 'texto 2']"
-    :btn_texts="['B1', 'B2']"
-  ></TabControler>
+  <TabController
+    :props=" [
+      {
+       statement: 'asdasfdf',
+       btn_text: 'ola'
+      },
+      {
+       statement: 'asaaaaaadf',
+       btn_text: 'ola'
+      },
+      {
+       statement: 'asdfffffffffffffff',
+       btn_text: 'ola'
+      },
+      ]"
+  ></TabController>
 </template>

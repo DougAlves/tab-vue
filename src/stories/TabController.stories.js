@@ -21,7 +21,14 @@ const Template = (args) => ({
 
 //👇 Each story then reuses that template
 export const Primary = Template.bind({});
-Primary.args = {
-  statements: ['true','T2' ],
-  btn_texts: ['Button','b2' ],
+Primary.args = { 
+  props: [{
+      statement: 'Texto 1',
+      btn_text: 'Button',
+    },
+    {
+      statement: 'Texto 2',
+      btn_text: 'outro',
+    }
+  ]
 };
